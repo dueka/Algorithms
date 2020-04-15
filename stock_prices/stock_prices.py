@@ -1,17 +1,15 @@
 # #!/usr/bin/python
 import argparse
 
-prices = [10, 7, 3, 8, 3, 2]
 
-
-# def find_max_profit(prices):
-#     for i in prices:
-#         max_profit_so_far = 0
-#         for i in range(len(prices) - 1):
-#             for j in range(i+1, len(prices)):
-#                 if prices[j] - prices[i] > max_profit_so_far:
-#                     max_profit_so_far = prices[j] - prices[i]
-#     return max_profit_so_far
+def find_max_profit(prices):
+    for i in prices:
+        max_profit = 0
+        for i in range(len(prices) - 1):
+            for j in range(i+1, len(prices)):
+                if prices[j] - prices[i] > max_profit:
+                    max_profit = prices[j] - prices[i]
+    return max_profit
 
 
 if __name__ == '__main__':
